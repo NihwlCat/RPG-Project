@@ -1,11 +1,11 @@
 package br.pedro.rproject.models.enums;
 
 public enum Status {
-    ALIVE ("VIVO"),
-    DEAD ("MORTO"),
-    INJURED ("FERIDO"),
-    UNCONSCIOUS ("INCONSCIENTE"),
-    TRAUMATIZED ("TRAUMATIZADO");
+    ALIVE ("Vivo"),
+    DEAD ("Morto"),
+    INJURED ("Ferido"),
+    UNCONSCIOUS ("Inconsciente"),
+    TRAUMATIZED ("Traumatizado");
 
     private final String value;
 

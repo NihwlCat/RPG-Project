@@ -31,8 +31,6 @@ public class PlayerService implements UserDetailsService {
     }
 
     public List<PlayerDTO> findAll(){
-        System.out.println(SecurityContextHolder.getContext().getAuthentication().getAuthorities());
-        System.out.println(SecurityContextHolder.getContext().getAuthentication().getName());
         return repository.findAll().stream()
                 .map(PlayerDTO::new)
                 .collect(Collectors.toList());

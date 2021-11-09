@@ -1,9 +1,11 @@
 package br.pedro.rproject.models.embedded;
 
 import br.pedro.rproject.models.enums.ItemType;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import java.util.Objects;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Item {
     private int id;
     private ItemType type;

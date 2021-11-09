@@ -24,7 +24,7 @@ import java.util.Date;
 
 public class TokenAuthFilter extends UsernamePasswordAuthenticationFilter {
 
-    public static final int TOKEN_EXP = 600_000;
+    public static final long TOKEN_EXP = 7200000L;
     public static final String SECRET = "SECRET";
 
     private final PlayerService service;

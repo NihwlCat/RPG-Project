@@ -26,6 +26,7 @@ public class Player {
         this.name = name;
         this.password = password;
         this.role = role;
+        this.annotations = " ";
     }
 
     public String getRole() {

@@ -56,13 +56,13 @@ public class PersonaResource {
     }
 
     @DeleteMapping(value = "/profile")
-    public ResponseEntity<Void> deleteItemFromInventory(@RequestParam String resourceId, @RequestBody String json) throws JsonProcessingException {
-        if(!resourceId.equals("spells") && !resourceId.equals("items") && !resourceId.equals("seals")){
+    public ResponseEntity<Void> deleteItemFromInventory(@RequestParam String resource, @RequestBody String json) throws JsonProcessingException {
+        if(!resource.equals("spells") && !resource.equals("items") && !resource.equals("seals")){
             throw new ServiceException("Invalid parameter type", HttpStatus.BAD_REQUEST);
         }
         ObjectMapper mapper = new ObjectMapper();
-        var obj = mapper.readValue(json, Utils.getAvailableParams().get(resourceId));
-        service.deleteItemFromAuthenticated(resourceId,obj);
+        var obj = mapper.readValue(json, Utils.getAvailableParams().get(resource));
+        service.deleteItemFromAuthenticated(resource,obj);
         return ResponseEntity.noContent().build();
     }
 
@@ -115,13 +115,13 @@ public class PersonaResource {
     }
 
     @DeleteMapping(value = "/master/{id}/resources")
-    public ResponseEntity<Void> deleteItemFromInventory(@PathVariable String id, @RequestParam String resourceId, @RequestBody String json) throws JsonProcessingException {
-        if(!resourceId.equals("spells") && !resourceId.equals("items") && !resourceId.equals("seals")){
+    public ResponseEntity<Void> deleteItemFromInventory(@PathVariable String id, @RequestParam String resource, @RequestBody String json) throws JsonProcessingException {
+        if(!resource.equals("spells") && !resource.equals("items") && !resource.equals("seals")){
             throw new ServiceException("Invalid parameter type", HttpStatus.BAD_REQUEST);
         }
         ObjectMapper mapper = new ObjectMapper();
-        var obj = mapper.readValue(json, Utils.getAvailableParams().get(resourceId));
-        service.deleteItemFromId(id,resourceId,obj);
+        var obj = mapper.readValue(json, Utils.getAvailableParams().get(resource));
+        service.deleteItemFromId(id,resource,obj);
         return ResponseEntity.noContent().build();
     }
 }

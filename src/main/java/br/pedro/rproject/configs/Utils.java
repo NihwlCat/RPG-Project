@@ -26,7 +26,6 @@ public class Utils {
     }
 
     public static String stringGenerate() {
-
         int leftLimit = 65;
         int rightLimit = 90;
         int targetStringLength = 7;

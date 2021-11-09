@@ -1,12 +1,15 @@
 package br.pedro.rproject.models.embedded;
 
 import br.pedro.rproject.models.enums.Status;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Profile {
     private String name;
     private int age;
     private String alignment;
     private Status status;
+    private String imgUrl;
 
     public Profile() {
     }
@@ -14,6 +17,14 @@ public class Profile {
     public Profile(String name) {
         this.name = name;
         this.status = Status.ALIVE;
+    }
+
+    public Profile(Profile profile) {
+        this.name = profile.getName();
+        this.age = profile.getAge();
+        this.alignment = profile.getAlignment();
+        this.status = profile.getStatus();
+        this.imgUrl = profile.getImgUrl();
     }
 
     public String getName() {
@@ -26,6 +37,14 @@ public class Profile {
 
     public int getAge() {
         return age;
+    }
+
+    public String getImgUrl() {
+        return imgUrl;
+    }
+
+    public void setImgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
     }
 
     public void setAge(int age) {
