@@ -1,0 +1,53 @@
+.status-box-container {
+    width: 315px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.status-info-container {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    span {
+        color: #FFF;
+        font-size: 0.70rem;
+    }
+}
+
+.status-value {
+    display: flex;
+    flex-direction: row;
+
+    input {
+        background: transparent;
+        width: 60px;
+        color: #FFF;
+        font-size: 0.7rem;
+        font-weight: 500;
+        border: none;
+        padding: 0 5px;
+
+        &:nth-child(1){
+            border-right: 2px solid #FFF;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+.status-progress-bar {
+    width: 100%;
+    border-radius: 20px;
+    background-color: rgba(196, 196, 196, 0.2);
+    height: 25px;
+    overflow: hidden;
+
+    div {
+        height: 100%;
+    }
+}

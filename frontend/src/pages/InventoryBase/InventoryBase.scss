@@ -1,0 +1,104 @@
+.inventory-base-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    p {
+        font-size: 1rem;
+        color: #FFF;
+        letter-spacing: 0.100px;
+        font-weight: 500;
+    }
+
+    button {
+        font-size: 1rem;
+        font-weight: 500;
+        color: #FFF;
+        cursor: pointer;
+        background-color: rgba(196, 196, 196, 0.2);
+        height: 40px;
+        border-radius: 10px;
+        width: 220px;
+        border: none;
+
+        &:focus {
+            box-shadow: 0 0 0 1.5pt #7251B5;
+            outline: none;
+        }
+
+        &:hover {
+            background-color: rgba(196, 196, 196, 0.4);
+        }
+    }
+}
+
+.inventory-base-wrapper {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,300px);
+    justify-content: space-between;
+    grid-gap: 20px 20px;
+
+}
+
+
+.spell-edit-container {
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.spell-edit-field {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+
+    span {
+        color: #FFF;
+        font-size: 0.8rem;
+        font-weight: 500;
+        margin-bottom: 10px;
+    }
+
+    input, textarea {
+        padding: 5px 10px;
+        font-size: 0.7rem;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        color: #FFF;
+        background-color: rgba(196, 196, 196, 0.2);
+        border-radius: 10px;
+        border: none;
+
+        &:focus {
+            box-shadow: 0 0 0 1pt #7251B5;
+            outline: none;
+        }
+    }
+
+    input {
+        width: 230px;
+        height: 40px; 
+    }
+
+    textarea {
+        width: 450px;
+        height: 100px;
+        resize: none;
+    }
+}
+
+.spell-edit-field-select {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    span {
+        color: #FFF;
+        font-size: 0.8rem;
+        font-weight: 500;
+        margin-bottom: 10px;
+    }
+}

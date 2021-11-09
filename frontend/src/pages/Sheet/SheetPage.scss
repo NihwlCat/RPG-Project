@@ -1,0 +1,26 @@
+.sheet-atts-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.sheet-atts-fields {
+    position: relative;
+    text-align: center;
+    padding: 25px;
+    width: 300px;
+    p {
+        font-size: 0.7rem;
+        color: #FFF;
+        font-weight: 500;
+    }
+}
+
+.sheet-alterate-icon {
+    color: #FFF;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 3;
+}

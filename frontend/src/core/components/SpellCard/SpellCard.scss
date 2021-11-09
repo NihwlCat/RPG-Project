@@ -1,0 +1,55 @@
+.spell-card-container {
+    position: relative;
+    width: 300px;
+}
+
+.spell-card-title {
+    text-align: left;
+    margin-bottom: 10px;
+    padding: 0px 5px;
+    span {
+        display: block;
+        color: #FFF;
+        font-size: 0.75rem;
+        font-weight: 500;
+    }
+
+    img {
+        height: 100px;
+        width: 100px;
+    }
+}
+
+.spell-card-description {
+
+    textarea {
+        width: 100%;
+        background: rgba(196, 196, 196, 0.2);
+        border-radius: 10px;
+        border: none;
+        padding: 10px;
+        color: #FFF;
+        font-size: 0.7rem;
+        font-weight: 500;
+        height: 250px;
+        resize: none;
+
+        &:focus {
+            outline: none;
+        }
+
+    }
+}
+
+.spell-card-alterate-icon {
+    color: #FFF;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 3;
+
+    * {
+        cursor: pointer;
+        margin-left: 30px;
+    }
+}

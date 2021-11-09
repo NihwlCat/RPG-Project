@@ -1,0 +1,33 @@
+.profile-atts-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.profile-atts {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    justify-content: center;
+    align-items: center;
+
+    span {
+        color: #FFF;
+        font-size: 0.80rem;    
+    }
+
+    input {
+        text-align: center;
+        width: 100%;
+        margin-top: 15px;
+        background: transparent;
+        color: #FFF;
+        font-size: 0.8rem;
+        font-weight: 500;
+        border: none;
+        padding: 0 5px;
+
+        &:focus {
+            outline: none;
+        }
+    }
+}

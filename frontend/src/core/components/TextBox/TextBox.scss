@@ -1,0 +1,46 @@
+.text-box-container {
+    position: relative;
+    
+    textarea {
+        width: 100%;
+        background: rgba(196, 196, 196, 0.2);
+        border-radius: 0px 0px 10px 10px;
+        border: none;
+        padding: 10px;
+        color: #FFF;
+        font-size: 0.7rem;
+        font-weight: 500;
+        height: 350px;
+
+        resize: none;
+
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    span {
+        color: #FFF;
+        font-size: 1rem;
+
+    }
+}
+
+.text-alterate-icon {
+    color: #FFF;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 3;
+
+}
+
+.rich-text-container {
+    margin-top: 20px;
+    border: 1px solid #7251B5;
+    background: rgba(114, 81, 181, 0.2);
+    height: 60px;
+    border-radius: 10px 10px 0px 0px;
+}

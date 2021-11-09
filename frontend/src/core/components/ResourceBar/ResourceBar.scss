@@ -1,0 +1,24 @@
+.resource-bar-title {
+    color: #7251B5;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.resource-navbar-item {
+    color: #FFF;
+    font-weight: 500;
+    margin-top: 10px;
+    font-size: 0.9rem;
+
+    &:hover {
+        color: #A06CD5;
+    }
+
+    &.active {
+        color: #A06CD5;
+    }
+}
+
+.resource-bar {
+    text-align: end;
+}

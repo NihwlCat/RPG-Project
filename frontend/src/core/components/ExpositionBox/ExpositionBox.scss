@@ -1,0 +1,77 @@
+.exposition-box-container {
+    width: 315px;
+    display: flex;
+    flex-direction: column;
+}
+
+.exposition-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    span {
+        color: #FFF;
+        font-size: 0.70rem;
+
+        &:nth-child(2){
+            border-left: 2px solid #FFF;
+            font-weight: 500;
+            padding-left: 5px;
+            width: 60px;
+        }
+
+        &:nth-child(1){
+            &:hover {
+                color: #7251B5;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.exposition-values {
+    display: flex;
+    flex-direction: row;
+
+    span {
+        color: #FFF;
+        font-size: 0.65rem;
+    }
+
+    input {
+        background: transparent;
+        width: 60px;
+        color: #FFF;
+        font-size: 0.7rem;
+        font-weight: 500;
+        border: none;
+        padding: 0 9px;
+        margin: 0 2px;
+
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+.exposition-values-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 6px;
+}
+
+.exposition-progress-bar {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    width: 100%;
+    border-radius: 20px;
+    background-color: rgba(196, 196, 196, 0.2);
+    height: 25px;
+    overflow: hidden;
+
+    div {
+        height: 100%;
+    }
+}

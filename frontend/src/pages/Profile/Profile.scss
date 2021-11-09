@@ -1,0 +1,66 @@
+.profile-header {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-header-exit {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.profile-header-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.profile-header-image {
+    border: 3px solid #7251B5;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 15px;
+}
+
+.profile-header-util {
+    margin-top: 50px;
+    margin-right: 65px;
+}
+
+.profile-header-resource {
+    margin-top: 50px;
+}
+
+.profile-header-nav {
+    display: flex;
+    flex-direction: row;
+}
+
+.alterate-icon {
+    cursor: pointer;
+    color: #FFF;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+}
+
+.profile-status-attributes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.profile-attributes-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.profile-extended-content {
+    margin-top: 30px;
+    margin-bottom: 60px;
+}

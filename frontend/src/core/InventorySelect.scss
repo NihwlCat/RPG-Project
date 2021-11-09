@@ -1,0 +1,45 @@
+.runes-select__control {
+    height: 40px !important;
+    border-radius: 10px !important;
+    margin-bottom: 17px;
+    margin-top: 1.4px;
+    background: rgba(196, 196, 196, 0.2) !important;
+    border: none !important;
+}
+  
+.runes-select__placeholder {
+    font-size: 0.7rem !important;
+    font-weight: 500 !important;
+    line-height: 0.9rem !important;
+    letter-spacing: -0.015em !important;
+    color: #9E9E9E !important;
+}
+  
+.runes-select__control--is-focused {
+    box-shadow: 0 0 0 1pt #7251B5 !important;
+    outline: none !important;
+    border: none !important;
+}
+  
+.runes-select__option--is-selected, .runes-select__option--is-focused {
+    background-color: rgba(114, 81, 181, 0.3) !important;
+}
+  
+.runes-select__option {
+    font-size: 0.7rem !important;
+    font-weight: 400 !important;
+    line-height: 0.9rem !important;
+    color: #383C43 !important;
+}
+  
+.runes-select__input-container, .global-select__single-value {
+    color: #FFF !important;
+    font-size: 0.7rem !important;
+    font-weight: 500 !important;
+    line-height: 0.9rem !important;
+}
+
+.runes-select__single-value {
+    font-size: 0.7rem !important;
+    color: #FFF !important;
+}

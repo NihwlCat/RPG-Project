@@ -1,0 +1,45 @@
+.seals-box {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.seals-title {
+    height: 100%;
+    width: 25%;
+    background-color: #C2C2C2;
+    border-radius: 10px 0px 0px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span {
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: #22272E;
+    }
+}
+
+.seals-content {
+    height: 100%;
+    width: 75%;
+    background-color: rgba(196, 196, 196, 0.2);
+    border-radius: 0px 10px 10px 0px;
+    padding: 0 40px;
+}
+
+.seals-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+
+    img {
+        width: 90px;
+        height: 90px;
+    }
+}
