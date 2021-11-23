@@ -1,6 +1,7 @@
 package br.pedro.rproject.resources;
 
 import br.pedro.rproject.services.DiscordBotService;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController

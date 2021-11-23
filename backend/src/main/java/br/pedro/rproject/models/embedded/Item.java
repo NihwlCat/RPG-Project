@@ -7,6 +7,7 @@ import java.util.Objects;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Item {
+
     private int id;
     private ItemType type;
     private String description;
