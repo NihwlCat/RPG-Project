@@ -63,6 +63,7 @@
     }
 
     input, textarea {
+        width: 100%;
         padding: 5px 10px;
         font-size: 0.7rem;
         font-weight: 500;
@@ -79,12 +80,10 @@
     }
 
     input {
-        width: 230px;
         height: 40px; 
     }
 
     textarea {
-        width: 450px;
         height: 100px;
         resize: none;
     }
@@ -94,7 +93,7 @@
     padding: 10px;
     display: flex;
     flex-direction: column;
-    width: 250px;
+    width: 100%;
     span {
         color: #FFF;
         font-size: 0.8rem;

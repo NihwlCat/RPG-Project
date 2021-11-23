@@ -1,4 +1,3 @@
-import mockImage from 'core/images/_mock.png'
 import { recoverTokenData } from 'core/utils/requests'
 import { Profile } from 'core/utils/types'
 import Select, { SingleValue } from 'react-select'
@@ -25,7 +24,7 @@ const Status = [
 const Info = ({profile, isEditing, onAction}:Props) => {
 
     return <div className="info-container">
-        <div className="info-image" style={{backgroundImage: `url(${mockImage})`}}>
+        <div className="info-image" style={{backgroundImage: `url(${profile.imgUrl})`}}>
         </div>
         <div className="info-content">
             <div className="info-fields">

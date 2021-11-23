@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping(value = "/interactions")
 public class BotResource {
-
     private final DiscordBotService service;
 
     BotResource(DiscordBotService service){
@@ -14,7 +13,7 @@ public class BotResource {
     }
 
     @PostMapping(value = "/bot")
-    public void msgDiscord(@RequestBody String attribute, @RequestParam(defaultValue = "") String personaId){
+    public ResponseEntity<String> msgDiscord(@RequestBody String attribute, @RequestParam(defaultValue = "") String personaId){
         String msg;
         if(personaId.equals("")){
             msg = service.diceRollingAuthenticated(attribute);
@@ -22,5 +21,6 @@ public class BotResource {
             msg = service.diceRolling(attribute, personaId);
         }
         service.sendMessage("762811309263552523", "895851040304431144", service.getDiceMessage(msg,attribute));
+        return ResponseEntity.ok(msg);
     }
 }

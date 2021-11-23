@@ -5,6 +5,7 @@ import './InventoryBase.scss'
 import 'core/InventorySelect.scss'
 import {Spell} from 'core/utils/types'
 import Select from 'react-select';
+import Modal from 'core/components/Modal/Modal';
 
 const Runes = [
     {value: 'https://raw.githubusercontent.com/NihwlCat/RPG-Project/master/resources/Runes/Fire.png', label: 'Ignis'},
@@ -87,28 +88,29 @@ const InventoryBase = ({title}:Props) => {
     return <div>
         <div className="inventory-base-header">
             <p>{title}</p>
-            {isCreating ? <button onClick={() => {setIsCreating(false); onInsertItem()}}>SALVAR</button> : <button onClick={() => setIsCreating(true)}>ADICIONAR</button>}
+            <button onClick={() => setIsCreating(true)}>ADICIONAR</button>
+            
         </div>
         {isCreating && (
-            <div className="spell-edit-container">
-                <div className="spell-edit-field">
-                    <span>NOME</span>
-                    <input type="text" value={payload.name} name="name" onChange={event => onChangeValue(event)}/>
-                </div>
-                <div className="spell-edit-field">
-                    <span>DESCRIÇÃO</span>
-                    <textarea value={payload.description} name="description" onChange={event => onChangeValue(event)}/>
-                </div>
-                <div className="spell-edit-field-select">
-                    <span>RUNA</span>
-                    <Select 
-                        placeholder={"Selecione"}
-                        defaultValue={Runes.find(rune => rune.value === payload.imgUrl)}
-                        options={Runes} 
-                        classNamePrefix="runes-select" 
-                        onChange={event => onChangeSelect(event?.value)}/>
-                </div>
-            </div>
+            <Modal onClose={() => setIsCreating(false)} onModalAction={() => {onInsertItem(); setIsCreating(false)}}>
+                    <div className="spell-edit-field">
+                        <span>NOME</span>
+                        <input type="text" value={payload.name} name="name" onChange={event => onChangeValue(event)}/>
+                    </div>
+                    <div className="spell-edit-field">
+                        <span>DESCRIÇÃO</span>
+                        <textarea value={payload.description} name="description" onChange={event => onChangeValue(event)}/>
+                    </div>
+                    <div className="spell-edit-field-select">
+                        <span>RUNA</span>
+                        <Select 
+                            placeholder={"Selecione"}
+                            defaultValue={Runes.find(rune => rune.value === payload.imgUrl)}
+                            options={Runes} 
+                            classNamePrefix="runes-select" 
+                            onChange={event => onChangeSelect(event?.value)}/>
+                    </div>
+            </Modal>
         )}
         {spells && (
            <div className="inventory-base-wrapper">

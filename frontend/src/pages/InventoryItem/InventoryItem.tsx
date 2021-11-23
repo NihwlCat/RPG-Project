@@ -4,6 +4,7 @@ import { useCallback, useEffect, useState } from 'react'
 import Select from 'react-select'
 import 'core/InventorySelect.scss'
 import ItemCard from 'core/components/ItemCard/ItemCard'
+import Modal from 'core/components/Modal/Modal'
 
 
 const Items = [
@@ -85,10 +86,10 @@ const InventoryItem = ({title}: Props) => {
     return <div>
         <div className="inventory-base-header">
             <p>{title}</p>
-            {isCreating ? <button onClick={() => {setIsCreating(false); onInsertItem()}}>SALVAR</button> : <button onClick={() => setIsCreating(true)}>ADICIONAR</button>}
+            <button onClick={() => setIsCreating(true)}>ADICIONAR</button>
         </div>
         {isCreating && (
-            <div className="spell-edit-container">
+            <Modal onClose={() => setIsCreating(false)} onModalAction={() => {onInsertItem(); setIsCreating(false)}}>
                 <div className="spell-edit-field">
                     <span>DESCRIÇÃO</span>
                     <textarea value={payload.description} name="description" onChange={event => onChangeValue(event)}/>
@@ -102,7 +103,7 @@ const InventoryItem = ({title}: Props) => {
                         classNamePrefix="runes-select" 
                         onChange={event => onChangeSelect(event?.value)}/>
                 </div>
-            </div>
+            </Modal>
         )}
         {items && (
            <div className="inventory-base-wrapper">

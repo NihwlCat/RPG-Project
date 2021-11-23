@@ -1,6 +1,7 @@
 import axios, { AxiosRequestConfig } from "axios"
 import jwtDecode from "jwt-decode"
 import { createBrowserHistory } from 'history'
+import { toast } from "react-toastify";
 
 export const newHistory = createBrowserHistory();
 
@@ -46,7 +47,7 @@ export const makePrivateRequestText = (params: AxiosRequestConfig) => {
 
 export const diceRoll = (attribute: string) => {
     makePrivateRequestText({url: '/interactions/bot', method:'POST', data: attribute})
-    .then(() => alert('Teste feito no Discord!'))
+    .then(r => toast.info('Teste feito no discord!'))
 }
 
 export const makeLogin = (username: string) => {

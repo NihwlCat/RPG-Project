@@ -39,20 +39,15 @@
 
 .individuality-description {
     height: 150px;
-
     background: rgba(196, 196, 196, 0.2);
     border-radius: 10px;
     border: none;
     padding: 10px;
     color: #FFF;
-    font-size: 0.7rem;
+    font-size: 0.70rem;
     font-weight: 500;
-
     resize: none;
-
-
     &:focus {
         outline: none;
     }
-
 }
