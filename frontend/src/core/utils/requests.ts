@@ -47,7 +47,9 @@ export const makePrivateRequestText = (params: AxiosRequestConfig) => {
 
 export const diceRoll = (attribute: string) => {
     makePrivateRequestText({url: '/interactions/bot', method:'POST', data: attribute})
-    .then(r => toast.info('Teste feito no discord!'))
+    .then(r => {
+        const result = String(r.data).split(',')
+        toast.dark(result[0] + ", " + result[1])})
 }
 
 export const makeLogin = (username: string) => {
