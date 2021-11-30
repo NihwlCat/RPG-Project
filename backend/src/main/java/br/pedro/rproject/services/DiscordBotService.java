@@ -37,7 +37,7 @@ public class DiscordBotService implements Bot{
             jda.getPresence().setStatus(OnlineStatus.ONLINE);
             jda.getPresence().setActivity(Activity.watching("Lavender Fields"));
             jda.awaitReady();
-            jda.getGuilds().forEach(g -> System.out.println(g.getId()+ ","+ g.getName() + "::" + g.getChannels()));
+            //jda.getGuilds().forEach(g -> System.out.println(g.getId()+ ","+ g.getName() + "::" + g.getChannels()));
             //jda.getGuilds().forEach(x -> Objects.requireNonNull(x.getDefaultChannel()).sendMessage("~ MUSICA SINISTRA TAM TAM TAAAM ~ Voltei").queue());
         } catch (LoginException | InterruptedException e) {
             e.printStackTrace();

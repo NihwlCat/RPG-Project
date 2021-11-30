@@ -21,7 +21,7 @@ public class BotResource {
         } else {
             msg = service.diceRolling(attribute, personaId);
         }
-        service.sendMessage("762811309263552523", "895851040304431144", service.getDiceMessage(msg,attribute));
+        service.sendMessage("762811309263552523", "905270114394460240", service.getDiceMessage(msg,attribute));
         return ResponseEntity.ok(msg);
     }
 }

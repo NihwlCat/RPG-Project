@@ -15,7 +15,7 @@ type Props = {
 
 const Status = [
     {value: 'ALIVE', label: 'Vivo'},
-    {value: 'DEAD', label: 'Morto'},
+    {value: 'DEAD', label: 'Morrendo'},
     {value: 'INJURED', label: 'Ferido'},
     {value: 'UNCONSCIOUS', label: 'Inconsciente'},
     {value: 'TRAUMATIZED', label: 'Traumatizado'}

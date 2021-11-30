@@ -29,7 +29,6 @@ public class PersonaResource {
 
     @GetMapping(value = "/profile")
     public ResponseEntity<PersonaDTO> findProfileByAuthenticated(){
-        System.out.println(SecurityContextHolder.getContext().getAuthentication().getAuthorities());
         var body = service.findProfileByAuthenticated();
         return ResponseEntity.ok(body);
     }
@@ -70,7 +69,6 @@ public class PersonaResource {
 
     @GetMapping(value = "/master")
     public ResponseEntity<List<PersonaDTO>> findAll(){
-        System.out.println(SecurityContextHolder.getContext().getAuthentication().getAuthorities());
         var body = service.findAll();
         return ResponseEntity.ok(body);
     }
